@@ -1,5 +1,5 @@
 class Hand < ActiveRecord::Base
-	STARTING_NUMBER_OF_CARDS = 7
+	STARTING_NUMBER_OF_CARDS = 26
 
 	has_many :cards, as: :cardable
 	belongs_to :game
@@ -12,6 +12,7 @@ class Hand < ActiveRecord::Base
 	end
 
 =begin
+No longer necessary in non-Uno game
 	def remove_card!(card)
 		card.update(cardable: nil)
 	end

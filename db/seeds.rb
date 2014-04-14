@@ -7,11 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # array of colors for cards
-['blue', 'green', 'red', 'yellow'].each do |c|
-	CardColor.find_or_create_by color: c
+['clubs', 'diamonds', 'hearts', 'spades'].each do |c|
+	CardSuit.find_or_create_by suit: c
 end
 
 # array of values
-(0..9).to_a.concat(['draw_two','reverse', 'skip', 'wild']).each do |v|
+(2..14).each do |v|
 	CardValue.find_or_create_by value: v
 end
