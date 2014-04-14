@@ -31,8 +31,11 @@ class Game < ActiveRecord::Base
 		self.last_played_card.update(cardable: nil)
 	end
 
-	def play_card
+=begin
+	def play_card!
+		self.last_played_card.update(cardable: card);
 	end
+=end
 
 end
 
